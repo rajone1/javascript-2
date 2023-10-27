@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: aliceblue;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="bg-black">
+    <div class="parent">
+      <div class="day">sun</div>
+      <div class="day">mon</div>
+      <div class="day">tues</div>
+      <div class="day">wed</div>
+      <div class="day">thu</div>
+    </div>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      console.log(parent);
+      console.log(parent.children);
+      // console.log(parent.children[1].innerHTML);
+      // console.log(parent.children[0].innerHTML);
+      // sob inner html ber korte hola
+
+      for (let element = 0; element < parent.children.length; element++) {
+        console.log(parent.children[element].innerHTML);
+      }
+
+      parent.children[1].style.color = "green";
+      // first child patahola
+
+      console.log(parent.firstElementChild);
+      console.log(parent.lastElementChild);
+
+      // parrent element ber korta hola
+
+      const findParent = document.querySelector(".day");
+
+      console.log(findParent);
+      console.log(findParent.parentElement);
+      console.log(findParent.nextElementSibling);
+
+      // node means all the details
+      console.log("node ", parent.childNodes);
+    </script>
+    <script src="domone.js"></script>
+  </body>
+</html>

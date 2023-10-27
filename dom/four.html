@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: whitesmoke">
+    <ul class="language">
+      <li>java script</li>
+    </ul>
+  </body>
+  <script>
+    // input value or item to use function
+
+    // use inner text easy but its not use full for big project
+
+    function addlanguage(langname) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langname}`;
+
+      document.querySelector(".language").appendChild(li);
+    }
+
+    // addlanguage("python");
+    // addlanguage("java");
+
+    // use createnodetext
+    function addoptimizednode(langname2) {
+      const li = document.createElement("li");
+
+      const nodeinput = document.createTextNode(langname2);
+      li.appendChild(nodeinput);
+
+      document.querySelector(".language").appendChild(li);
+    }
+    addoptimizednode("python");
+    addoptimizednode("java script");
+
+    // ex:
+    function addinnervalue(value) {
+      const li = document.createElement("li");
+
+      const innervalue = document.createTextNode(value);
+      li.appendChild(innervalue);
+
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addinnervalue("java");
+    addinnervalue("go lang");
+
+    // ***edit element
+
+    const thirdlang = document.querySelector("li:nth-child(3)");
+
+    // console.log(thirdlang);
+    // thirdlang.innerHTML = "Swift";
+    // or
+    // thirdlang.outerHTML = "<li>type script </li>";
+    // or
+    const newli = document.createElement("li");
+
+    newli.textContent = "swift";
+
+    thirdlang.replaceWith(newli);
+    // ***remove or delete  element
+    const removeelement = document.querySelector("li:last-child");
+    removeelement.remove();
+  </script>
+</html>
